@@ -7,118 +7,135 @@
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 0;
-      background: #f7f8fa;
-      color: #1f2430;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
       padding: 0 20px;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f7f8fa;
     }
 
     h1 {
-      font-size: 36px;
       margin-bottom: 10px;
     }
 
-    .subtitle {
-      color: #666;
-      margin-bottom: 40px;
+    p.subtitle {
+      color: #555;
+      margin-bottom: 30px;
     }
 
     h2 {
       margin-top: 40px;
-      margin-bottom: 15px;
-      font-size: 22px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 5px;
     }
 
-    .card {
-      background: white;
-      border: 1px solid #e2e6ea;
+    .experiment {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #e5e7eb;
       border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 15px;
-      transition: all 0.2s ease;
+      background: #ffffff;
+      transition: 0.2s ease;
     }
 
-    .card:hover {
-      border-color: #17365c;
+    .experiment:hover {
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .card-title {
-      font-size: 18px;
-      margin: 0 0 8px 0;
-      font-weight: 600;
+    .experiment h3 {
+      margin: 0 0 5px 0;
     }
 
-    .card-desc {
-      font-size: 14px;
+    .experiment p {
+      margin: 5px 0 10px 0;
       color: #555;
-      margin-bottom: 12px;
-      line-height: 1.4;
     }
 
-    .button {
+    .experiment a {
       display: inline-block;
-      padding: 8px 14px;
-      background: #17365c;
-      color: white;
       text-decoration: none;
-      border-radius: 4px;
+      color: white;
+      background: #17365c;
+      padding: 6px 12px;
+      border-radius: 5px;
       font-size: 14px;
     }
 
-    .button:hover {
-      background: #0f2743;
+    .experiment a:hover {
+      background: #1f4a7a;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Sample Experiments</h1>
-    <p class="subtitle">
-      Online experiments in psycholinguistics, pragmatics, and sociology.
-    </p>
 
-    <h2>Psycholinguistic / Pragmatics</h2>
+  <h1>Experiments</h1>
+  <p class="subtitle">
+    Interactive experiments in linguistics and social science.
+  </p>
 
-    <div class="card">
-      <div class="card-title">Expressive Meaning Experiment</div>
-      <div class="card-desc">
-        Experiment on the interpretation of expressive language in context.
-      </div>
-      <a class="button" href="https://YOUR-NETLIFY-LINK.netlify.app" target="_blank">
-        Open experiment
-      </a>
-    </div>
+  <!-- ===================== -->
+  <!-- PSYCHOLINGUISTICS -->
+  <!-- ===================== -->
 
-    <div class="card">
-      <div class="card-title">Language Simplification Study</div>
-      <div class="card-desc">
-        Comparing responses across standard vs. simplified language.
-      </div>
-      <a class="button" href="https://YOUR-NETLIFY-LINK.netlify.app" target="_blank">
-        Open experiment
-      </a>
-    </div>
+  <h2>Psycholinguistic Experiments (Magpie)</h2>
+  <p>
+    Experimental studies on language processing, expressive meaning, and derogatory language.
+  </p>
 
-    <h2>Sociological</h2>
-
-    <div class="card">
-      <div class="card-title">Gender Roles Questionnaire</div>
-      <div class="card-desc">
-        Survey on attitudes toward gender roles, family, and society.
-      </div>
-      <a class="button" href="https://YOUR-NETLIFY-LINK.netlify.app" target="_blank">
-        Open experiment
-      </a>
-    </div>
-
+  <div class="experiment">
+    <h3>Mixed EAs and Perspective</h3>
+    <p>Forced-choice task investigating perspective attribution in expressive adjectives.</p>
+    <a href="https://eaperspective.netlify.app/" target="_blank">Run Experiment</a>
   </div>
+
+  <div class="experiment">
+    <h3>Offensive Language Perception</h3>
+    <p>Person selection task examining perceived targets of offense.</p>
+    <a href="https://groupderogmeaning.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
+  <div class="experiment">
+    <h3>Wh-Exclamatives Felicity</h3>
+    <p>Likert rating study on felicity conditions of wh-exclamatives.</p>
+    <a href="https://whexclamatives.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
+  <div class="experiment">
+    <h3>Pejorative Incongruence Detection</h3>
+    <p>Self-paced reading task detecting gender-pejorative mismatches.</p>
+    <a href="https://pejorativeincondetec.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
+  <div class="experiment">
+    <h3>Gender Pejoratives Processing</h3>
+    <p>Self-paced reading study measuring processing difficulty.</p>
+    <a href="https://genderpejorativespr.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- SOCIAL SCIENCE -->
+  <!-- ===================== -->
+
+  <h2>Social Science Experiments</h2>
+  <p>
+    Questionnaire-based demos showcasing survey design and implementation.
+  </p>
+
+  <div class="experiment">
+    <h3>Questionnaire Demo with Language Selection</h3>
+    <p>Showcase of a multi-page questionnaire based on standard survey items, including a choice between standard and simplified language.</p>
+    <a href="https://sosci-dif-lang.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
+  <div class="experiment">
+    <h3>Questionnaire Demo across Multiple Topics</h3>
+    <p>Showcase of a browser-based questionnaire using standard survey items across several thematic sections.</p>
+    <a href="https://sosci-dif-top.netlify.app/" target="_blank">Run Experiment</a>
+  </div>
+
 </body>
 </html>
