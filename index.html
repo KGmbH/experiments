@@ -6,34 +6,74 @@
   <title>Experiments | Kalle Glauch</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      max-width: 800px;
+      max-width: 1280px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 0 24px;
       line-height: 1.6;
       color: #1f2937;
       background: #f7f8fa;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+      text-align: center;
     }
 
     p.subtitle {
       color: #555;
-      margin-bottom: 30px;
+      margin: 0 auto 40px auto;
+      font-size: 1.05rem;
+      text-align: center;
+      max-width: 760px;
     }
 
-    h2 {
-      margin-top: 40px;
+    p.subtitle a {
+      color: #17365c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    p.subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .section-card h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.35rem;
       border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 5px;
+      padding-bottom: 8px;
+    }
+
+    .section-description {
+      margin: 0 0 20px 0;
+      color: #555;
     }
 
     .experiment {
-      margin-top: 20px;
-      padding: 15px;
+      margin-top: 14px;
+      padding: 14px 16px;
       border: 1px solid #e5e7eb;
       border-radius: 8px;
       background: #ffffff;
@@ -41,16 +81,19 @@
     }
 
     .experiment:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
     }
 
     .experiment h3 {
-      margin: 0 0 5px 0;
+      margin: 0 0 6px 0;
+      font-size: 1.02rem;
     }
 
     .experiment p {
-      margin: 5px 0 10px 0;
+      margin: 0 0 10px 0;
       color: #555;
+      font-size: 0.95rem;
     }
 
     .experiment a {
@@ -61,10 +104,22 @@
       padding: 6px 12px;
       border-radius: 5px;
       font-size: 14px;
+      transition: background 0.2s ease;
     }
 
     .experiment a:hover {
       background: #1f4a7a;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
     }
   </style>
 </head>
@@ -73,68 +128,99 @@
 
   <h1>Experiments</h1>
   <p class="subtitle">
-    Interactive experiments in linguistics and social science.
+    Interactive experiments in linguistics and social science, implemented with
+    <a href="https://magpie-experiments.org/" target="_blank">magpie</a>.
+    These demos illustrate different methods for collecting and structuring behavioral data.
   </p>
 
-  <!-- ===================== -->
-  <!-- PSYCHOLINGUISTICS -->
-  <!-- ===================== -->
+  <div class="grid">
 
-  <h2>Psycholinguistic Experiments (Magpie)</h2>
-  <p>
-    Experimental studies on language processing, expressive meaning, and derogatory language.
-  </p>
+    <section class="section-card">
+      <h2>Psycholinguistic Experiments</h2>
+      <p class="section-description">
+        Paradigms in pragmatics and sentence processing focusing on interpretation, acceptability, and online processing.
+      </p>
 
-  <div class="experiment">
-    <h3>Mixed EAs and Perspective</h3>
-    <p>Forced-choice task investigating perspective attribution in expressive adjectives.</p>
-    <a href="https://eaperspective.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+        <h3>Forced-Choice Task</h3>
+        <p>Participants choose between predefined response options to indicate interpretation preferences, here used to investigate the resolution of expressive adjectives.</p>
+        <a href="https://eaperspective.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <div class="experiment">
-    <h3>Offensive Language Perception</h3>
-    <p>Person selection task examining perceived targets of offense.</p>
-    <a href="https://groupderogmeaning.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+        <h3>Referent Selection Task</h3>
+        <p>Participants identify the perceived target of the scope of offensivenes of a pejorative, clicking on faces presented.</p>
+        <a href="https://groupderogmeaning.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <div class="experiment">
-    <h3>Wh-Exclamatives Felicity</h3>
-    <p>Likert rating study on felicity conditions of wh-exclamatives.</p>
-    <a href="https://whexclamatives.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+        <h3>Likert-Scale Rating</h3>
+        <p>Participants rate the acceptability or felicity of linguistic stimuli, here applied to wh-exclamatives in context (answer options become clickable only after 10 seconds).</p>
+        <a href="https://whexclamatives.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <div class="experiment">
-    <h3>Pejorative Incongruence Detection</h3>
-    <p>Self-paced reading task detecting gender-pejorative mismatches.</p>
-    <a href="https://pejorativeincondetec.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+  <h3>Incongruence Detection Task</h3>
+  <p>Words are presented sequentially and participants press a button when they detect an incongruent word, allowing measurement of how quickly mismatches in pejorative interpretation are identified.</p>
+  <a href="https://pejorativeincondetec.netlify.app/" target="_blank">Run Experiment</a>
+    </div>
 
-  <div class="experiment">
-    <h3>Gender Pejoratives Processing</h3>
-    <p>Self-paced reading study measuring processing difficulty.</p>
-    <a href="https://genderpejorativespr.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+        <h3>Self-Paced Reading (Processing Effort)</h3>
+        <p>Measures online processing effort during sentence comprehension, here applied to the processing of gender-related pejoratives.</p>
+        <a href="https://genderpejorativespr.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
+    </section>
 
+    <section class="section-card">
+      <h2>Social Science Experiments</h2>
+      <p class="section-description">
+        Questionnaire-based paradigms focusing on survey logic, routing, and dynamic question design.
+      </p>
 
-  <!-- ===================== -->
-  <!-- SOCIAL SCIENCE -->
-  <!-- ===================== -->
+      <div class="experiment">
+        <h3>Basic Screening</h3>
+        <p>Single-criterion eligibility screening.</p>
+        <a href="https://sosci-basic-screening.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <h2>Social Science Experiments</h2>
-  <p>
-    Questionnaire-based demos showcasing survey design and implementation.
-  </p>
+      <div class="experiment">
+        <h3>Language Selection</h3>
+        <p>Language-based routing within a questionnaire.</p>
+        <a href="https://sosci-dif-lang.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <div class="experiment">
-    <h3>Questionnaire Demo with Language Selection</h3>
-    <p>Showcase of a multi-page questionnaire based on standard survey items, including a choice between standard and simplified language.</p>
-    <a href="https://sosci-dif-lang.netlify.app/" target="_blank">Run Experiment</a>
-  </div>
+      <div class="experiment">
+        <h3>Complex Screening</h3>
+        <p>Multi-criterion inclusion and exclusion logic.</p>
+        <a href="https://sosci-complex-screening.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
 
-  <div class="experiment">
-    <h3>Questionnaire Demo across Multiple Topics</h3>
-    <p>Showcase of a browser-based questionnaire using standard survey items across several thematic sections.</p>
-    <a href="https://sosci-dif-top.netlify.app/" target="_blank">Run Experiment</a>
+      <div class="experiment">
+        <h3>Piping</h3>
+        <p>Dynamic reuse of participant responses.</p>
+        <a href="https://sosci-piping.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
+
+      <div class="experiment">
+        <h3>Branching</h3>
+        <p>Conditional questionnaire flow based on responses.</p>
+        <a href="https://sosci-branching.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
+
+      <div class="experiment">
+        <h3>Carry Forward</h3>
+        <p>Reusing selected answers in later questions.</p>
+        <a href="https://sosci-carry-forward.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
+
+      <div class="experiment">
+        <h3>Questionnaire Demo across Multiple Topics</h3>
+        <p>Multi-section survey with standard structure.</p>
+        <a href="https://sosci-dif-top.netlify.app/" target="_blank">Run Experiment</a>
+      </div>
+    </section>
+
   </div>
 
 </body>
